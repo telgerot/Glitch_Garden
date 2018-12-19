@@ -11,6 +11,7 @@ float currentSpeed = 1f;
 	// Use this for initialization
 	void Start () {
         animator = GetComponent<Animator>();
+        // New comment;
     }	
 
 	void Update () {
