@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,12 +12,20 @@ float currentSpeed = 1f;
 	// Use this for initialization
 	void Start () {
         animator = GetComponent<Animator>();
-        // New comment;
     }	
 
 	void Update () {
         transform.Translate(Vector2.left * currentSpeed * Time.deltaTime );
+        UpdateAnimationState();
 	}
+
+    private void UpdateAnimationState()
+    {
+        if (!currentTarget)
+        {
+            animator.SetBool("IsAttacking", false);
+        }
+    }
 
     public void SetMovementSpeed(float speed)
     {
@@ -31,7 +40,11 @@ float currentSpeed = 1f;
 
     public void StrikeCurrentTarget(float damage)
     {
-        if (!currentTarget) { return; }
+        if (!currentTarget)
+        {
+            return;
+        }
+
         Health health = currentTarget.GetComponent<Health>();
         if (health)
         {
