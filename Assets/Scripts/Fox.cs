@@ -10,7 +10,7 @@ public class Fox : MonoBehaviour
         Attacker attacker = GetComponent<Attacker>();
         Animator animator = GetComponent<Animator>();
 
-        if (otherObject.name == "Gravestone")
+        if (otherObject.tag == "Blocker")
         {
             animator.SetTrigger("jumpTrigger");
         }
