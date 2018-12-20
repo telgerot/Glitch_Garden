@@ -43,6 +43,11 @@ public class Shooter : MonoBehaviour {
             {
                 myLaneSpawner = spawner;
             }
+            
+        }
+        if (!myLaneSpawner)
+        {
+            Debug.Log("WARNING: No lanespawner detected!  Check the y coordinates of " + gameObject.name); //bug checker
         }
     }
 
