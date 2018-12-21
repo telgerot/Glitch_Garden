@@ -122,7 +122,7 @@ PrefabInstance:
     - target: {fileID: 3455538098051558383, guid: 09309aa1c1a5604418cd797c35d88e38,
         type: 3}
       propertyPath: gameOverScreenDelay
-      value: 2
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 1657419217789327943, guid: 09309aa1c1a5604418cd797c35d88e38,
         type: 3}
@@ -233,6 +233,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7463422830289012998, guid: 09309aa1c1a5604418cd797c35d88e38,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09309aa1c1a5604418cd797c35d88e38, type: 3}
