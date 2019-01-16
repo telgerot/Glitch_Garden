@@ -8,7 +8,7 @@ public class AttackerSpawner : MonoBehaviour {
     [SerializeField] float maxSpawnTime = 5f;
     [SerializeField] Attacker[] attackerPrefabArray;
 
-    bool spawn = true;
+    public bool spawn = true;
 
 
 	// Use this for initialization
