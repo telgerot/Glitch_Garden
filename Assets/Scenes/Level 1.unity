@@ -119,6 +119,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 660618948570553771, guid: 09309aa1c1a5604418cd797c35d88e38,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 660618948570553771, guid: 09309aa1c1a5604418cd797c35d88e38,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 660618948570553771, guid: 09309aa1c1a5604418cd797c35d88e38,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5635193827889310268, guid: 09309aa1c1a5604418cd797c35d88e38,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5635193827889310268, guid: 09309aa1c1a5604418cd797c35d88e38,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5635193827889310268, guid: 09309aa1c1a5604418cd797c35d88e38,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3455538098051558383, guid: 09309aa1c1a5604418cd797c35d88e38,
         type: 3}
       propertyPath: gameOverScreenDelay
