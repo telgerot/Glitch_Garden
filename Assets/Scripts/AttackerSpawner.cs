@@ -10,8 +10,6 @@ public class AttackerSpawner : MonoBehaviour {
 
     public bool spawn = true;
 
-
-	// Use this for initialization
 	IEnumerator Start ()
     {
         while (spawn)

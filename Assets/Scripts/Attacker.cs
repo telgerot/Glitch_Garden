@@ -9,12 +9,16 @@ float currentSpeed = 1f;
     GameObject currentTarget;
     Animator animator;
 
-	// Use this for initialization
-	void Start () {
+    private void Awake()
+    {
+        FindObjectOfType<LevelController>().AttackerSpawned();
+    }
+
+    private void Start () {
         animator = GetComponent<Animator>();
     }	
 
-	void Update () {
+	private void Update () {
         transform.Translate(Vector2.left * currentSpeed * Time.deltaTime );
         UpdateAnimationState();
 	}
@@ -50,5 +54,10 @@ float currentSpeed = 1f;
         {
             health.DealDamage(damage);
         }
+    }
+
+    private void OnDestroy()
+    {
+        FindObjectOfType<LevelController>().AttackerKilled();
     }
 }

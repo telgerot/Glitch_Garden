@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2340626767471641088}
   - component: {fileID: 2340626767471641089}
+  - component: {fileID: 2907781159762893068}
   m_Layer: 0
   m_Name: Level Controller
   m_TagString: Untagged
@@ -43,3 +44,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204f1288b9a2bf74baadbdb4a0a373e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winLabel: {fileID: 907752043356708493, guid: efa0b9c5175dbcb41b893ad3fc312efa, type: 3}
+--- !u!114 &2907781159762893068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2340626767471641094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d126e3babb8484a8654a0b4ca9d62a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  splashScreenDelay: 3

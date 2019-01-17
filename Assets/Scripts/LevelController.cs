@@ -6,38 +6,40 @@ using UnityEngine;
 public class LevelController : MonoBehaviour
 {
     int numberOfLivingAttackers;
-    GameTimer gameTimer;
+    bool levelTimerFinished = false;
+    [SerializeField] GameObject winLabel;
 
-    private void Start()
+
+    public void AttackerSpawned()
     {
-        gameTimer = FindObjectOfType<GameTimer>();
+        numberOfLivingAttackers++;
     }
 
-    private void Update()
+    public void AttackerKilled()
     {
-        CheckTimerAndStopSpawners();
-        CheckIfLevelPassed();
-    }
-
-    private void CheckTimerAndStopSpawners()
-    {
-        if (gameTimer.timerFinished)
+        numberOfLivingAttackers--;
+        if (numberOfLivingAttackers <= 0 && levelTimerFinished)
         {
-            var spawners = FindObjectsOfType<AttackerSpawner>();
-            foreach (AttackerSpawner spawner in spawners)
-            {
-                spawner.spawn = false;
-            }
+            print("Show win now");
+            winLabel.SetActive(true);
         }
     }
 
-    private void CheckIfLevelPassed()
+    public void LevelTimerFinished()
     {
-        numberOfLivingAttackers = FindObjectsOfType<Attacker>().Length;
+        levelTimerFinished = true;
+        StopSpawners();
+    }
 
-        if (gameTimer.timerFinished && numberOfLivingAttackers == 0)
+    private void StopSpawners()
+    {
+        var spawners = FindObjectsOfType<AttackerSpawner>();
+
+        foreach (AttackerSpawner spawner in spawners)
         {
-            print("Game over man");
+            spawner.spawn = false;
         }
     }
+
+
 }
