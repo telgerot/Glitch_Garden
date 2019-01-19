@@ -13,6 +13,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] AudioClip gameOverClip;
     [SerializeField] float gameOverSoundVolume;
 
+    
+
     Text playerHealthText;
     AudioSource gameOverSound;
 
@@ -29,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
         if (playerHealth <= 0)
         {
             PlayDefeatSequence();
-            StartCoroutine(GameOver());
+            FindObjectOfType<LevelController>().TurnOnFailCanvas();
         }
     }
 
@@ -49,11 +51,5 @@ public class PlayerHealth : MonoBehaviour
             playerHealth = 0;
         }
         UpdateDisplay();
-    }
-
-    IEnumerator GameOver()
-    {     
-        yield return new WaitForSeconds(gameOverScreenDelay);
-        SceneManager.LoadScene(1);
     }
 }

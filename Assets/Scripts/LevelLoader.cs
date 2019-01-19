@@ -24,8 +24,20 @@ public class LevelLoader : MonoBehaviour {
         LoadNextLevel();
     }
 
-public void LoadNextLevel()
+    public void LoadNextLevel()
     {
         SceneManager.LoadScene(currentSceneIndex + 1);
+    }
+
+    public void RestartLevel()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
+    public void LoadMainMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(1);
     }
 }

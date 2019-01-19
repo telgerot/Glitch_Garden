@@ -44,7 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204f1288b9a2bf74baadbdb4a0a373e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winLabel: {fileID: 0}
+  winCanvas: {fileID: 907752043356708493, guid: efa0b9c5175dbcb41b893ad3fc312efa,
+    type: 3}
+  loseCanvas: {fileID: 907752043356708493, guid: fe89a9fa14ee82e46bde4673b4ec6245,
+    type: 3}
+  winSound: {fileID: 8300000, guid: 1ce0fd8d43507194eacc2afe832b6510, type: 3}
+  winSoundVolume: 0.1
+  levelTransitionTime: 3
 --- !u!114 &2907781159762893068
 MonoBehaviour:
   m_ObjectHideFlags: 0
